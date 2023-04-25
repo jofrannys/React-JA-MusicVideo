@@ -1,0 +1,34 @@
+.footer{
+    width: 100%;
+    display: flex;
+    padding: 5%;
+    align-items: center;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    justify-content: space-between;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+.redes img{
+    padding: 0px 15px;
+}
+@media  screen and (max-width: 460px){
+    .footer{
+        display: flex;
+        flex-direction: column;
+        font-size: 19px;
+        
+    }
+    .redes {
+        margin-bottom: 20px;
+    }  
+    .footer img{
+        margin-bottom: 50px;
+    }
+    
+    
+
+}
