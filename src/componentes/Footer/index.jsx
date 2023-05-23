@@ -2,20 +2,24 @@ import "./Footer.css"
 
 
 const Footer = () => {
-    return <footer className="footer" style={{backgroundImage: "url(/img/footer.png)"}}>
+    return <footer className="footer">
         <div className="redes">
-            <a href= 'https://www.aluracursos.com'>
+            <a href="#" class="logo">JA | MusicVideo.</a>
+           
+            
+        </div>
+        <div className="redes" >
+            <a href= '#'>
                 <img src="/img/facebook.png" alt="Facebook"/>
             </a>
-            <a href= 'https://www.aluracursos.com'>
+            <a href= '#'>
                 <img src="/img/twitter.png" alt="Twitter"/>
             </a>
-            <a href= 'https://www.aluracursos.com'>
+            <a href= '#'>
                 <img src="/img/instagram.png" alt="Instagram"/>
             </a>
-        </div>
-        <img src="/img/Logo.png" alt="org"  />
-        <strong> Desarrollado por Alura</strong>
+        </div> 
+        <strong> Desarrollado por Jofrannys Arcila</strong>
 
     </footer>
 }

@@ -2,114 +2,161 @@ import { useState } from "react";
 import { v4 as uuidv4 } from 'uuid'
 import Formulario from  "./componentes/Formulario/Formulario.js";
 import './App.css';
-import Header from "./componentes/Header/Header.js";
-import MiOrg from "./componentes/MiOrg/index.js";
-import Equipo from "./componentes/Equipo/index.js";
-import Footer from "./componentes/Footer/index.js";
+import Header from "./componentes/Header/Header.jsx";
+import Categoria from "./componentes/Categoria/index.jsx";
+import Footer from "./componentes/Footer/index.jsx";
+import Banner from "./componentes/Banner/index.jsx";
 
 function App() {
-
+  
   const [mostrarFormulario, actualizarMostar] = useState(false)
-  const [colaboradores, actualizarColaboradores] = useState([{
+  const [colaboradores, actualizarColaboradores,] = useState([{
     id: uuidv4(),
-    equipo: "Front End",
-    foto: "https://github.com/harlandlohora.png",
-    nombre: "Harland Lohora",
-    puesto: "Instructor",
+    equipo: "Kpop",
+    video: "https://youtu.be/Vpromp90G4g",
+    puesto: "kpop Girls",
+    nombre: "Hyolyn",
     fav: true
   },
   {
     id: uuidv4(),
-    equipo: "Programación",
-    foto: "https://github.com/genesysaluralatam.png",
-    nombre: "Genesys Rondón",
-    puesto: "Desarrolladora de software e instructora",
-    fav: false
+    equipo: "Kpop",
+    video: "https://youtu.be/T0XInumvMjM",
+    puesto: "kpop Girls",
+    nombre: "Aespa",
+    fav: true
   },
   {
     id: uuidv4(),
-    equipo: "UX y Diseño",
-    foto: "https://github.com/JeanmarieAluraLatam.png",
-    nombre: "Jeanmarie Quijada",
-    puesto: "Instructora en Alura Latam",
-    fav: false
+    equipo: "Heavy Metal",
+    video: "https://youtu.be/bd5ZDo3l4wA",
+    puesto: "heavy metal español",
+    nombre: "Tierra Santa",
+    fav: true
   },
   {
     id: uuidv4(),
-    equipo: "UX y Diseño",
-    foto: "https://github.com/jofrannys.png",
-    nombre: "Jofrannys Arcila",
-    puesto: "Estudiante Next One",
-    fav: false
+    equipo: "Heavy Metal",
+    video: "https://youtu.be/X4bgXH3sJ2Q",
+    puesto: "heavy metal",
+    nombre: "Iron Maiden",
+    fav: true
   },
   {
     id: uuidv4(),
-    equipo: "Programación",
-    foto: "https://github.com/christianpva.png",
-    nombre: "Christian Velasco",
-    puesto: "Head de Alura e Instructor",
-    fav: false
+    equipo: "Pop",
+    video: "https://youtu.be/Eo-KmOd3i7s",
+    puesto: "pop",
+    nombre: "Nsync",
+    fav: true
   },
   {
     id: uuidv4(),
-    equipo: "Innovación y Gestión",
-    foto: "https://github.com/JoseDarioGonzalezCha.png",
-    nombre: "Jose Gonzalez",
-    puesto: "Dev FullStack",
-    fav: false
-  }])
+    equipo: "Pop",
+    video: "https://youtu.be/QYh6mYIJG2Y",
+    puesto: "pop Girls",
+    nombre: "Ariana Grande",
+    fav: true
+  },
+  {
+    id: uuidv4(),
+    equipo: "Alternativo",
+    video: "https://youtu.be/JuLsB8_SYU8",
+    puesto: "rock",
+    nombre: "Cuarteto de Nos",
+    fav: true
+  },
+  {
+    id: uuidv4(),
+    equipo: "Alternativo",
+    video: "https://youtu.be/aDdOnl0bHO4",
+    puesto: "girls",
+    nombre: "Joan Osborne",
+    fav: true
+  },
+  {
+    id: uuidv4(),
+    equipo: "Baladas",
+    video: "https://youtu.be/ODsqyfI5R28",
+    puesto: "balada",
+    nombre:"Chayanne",
+    fav: true
+  },
+  {
+    id: uuidv4(),
+    equipo: "Baladas",
+    video: "https://youtu.be/vM6r0Z8ie1g",
+    puesto: "Balada",
+    nombre:"Camilo Secto",
+    fav: true
+  },
+  {
+    id: uuidv4(),
+    equipo: "Opening Anime",
+    video: "https://youtu.be/1gftUBdwcmc",
+    puesto: "Anime",
+    nombre:"Saint Seiya",
+    fav: true
+  },
+  {
+    id: uuidv4(),
+    equipo: "Opening Anime",
+    video: "https://youtu.be/lN05FU2Lkg0",
+    puesto: "Anime",
+    nombre:"Death Note",
+    fav: true
+  },
+
+
+ 
+
+ 
+  ])
 
   const [equipos, actualizarEquipos] = useState(
     [
 
       {
         id: uuidv4(),
-        titulo:"Programación",
-        colorPrimario: "#57C278",
+        titulo:"Kpop",
+        colorPrimario: "#464040",
         colorSecundario:"#D9F7E9"
       },
   
       {
         id: uuidv4(),
-        titulo:"Front End",
-        colorPrimario: "#82CFFA",
+        titulo:"Heavy Metal",
+        colorPrimario: "#5e5a5a",
         colorSecundario:"#E8F8FF"
       },
   
       {
         id: uuidv4(),
-        titulo:"Data Science",
-        colorPrimario: "#A6D157",
+        titulo:"Pop",
+        colorPrimario: "#464040",
         colorSecundario:"#F0F8E2"
       },
   
       {
         id: uuidv4(),
-        titulo:"Devops",
-        colorPrimario: "#E06B69",
+        titulo:"Alternativo",
+        colorPrimario: "#5e5a5a",
         colorSecundario:"#FDE7E8"
       },
   
       {
         id: uuidv4(),
-        titulo:"UX y Diseño",
-        colorPrimario: "#DB6EBF",
+        titulo:"Baladas",
+        colorPrimario: "#464040",
         colorSecundario:"#FAE9F5"
       },
   
       {
         id: uuidv4(),
-        titulo:"Móvil",
-        colorPrimario: "#FFBA05",
+        titulo:"Opening Anime",
+        colorPrimario: "#5e5a5a",
         colorSecundario:"#FFF5D9"
-      },
-  
-      {
-        id: uuidv4(),
-        titulo:"Innovación y Gestión",
-        colorPrimario: "#FF8A29",
-        colorSecundario:"#FFEEDF"
-      },
+      }
       
   ])
   const cambiarMostar = () => {
@@ -159,7 +206,8 @@ function App() {
 
   return (
     <div>
-      <Header/>
+      <Header cambiarMostar={cambiarMostar}/>
+      
       { 
       mostrarFormulario && <Formulario 
         equipos={equipos.map((equipo) => equipo.titulo)} 
@@ -168,10 +216,11 @@ function App() {
         /> 
         
       }
+      <Banner  />
       
-      <MiOrg cambiarMostar={cambiarMostar} />
+      
       {
-        equipos.map( (equipo) => <Equipo  
+        equipos.map( (equipo) => <Categoria  
         datos={equipo} 
         key={equipo.titulo} 
         colaboradores={colaboradores.filter(colaborador => colaborador.equipo === equipo.titulo)}
@@ -182,6 +231,7 @@ function App() {
         )
         
       }
+      
       <Footer />
     </div>
   );

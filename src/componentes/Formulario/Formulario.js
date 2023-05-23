@@ -9,7 +9,7 @@ const Formulario = (props) => {
 
     const [nombre, actualizarNombre] = useState("")
     const [puesto, actualizarPuesto] = useState("")
-    const [foto, actualizarFoto] = useState("")
+    const [video, actualizarFoto] = useState("")
     const [equipo, actualizarEquipo] = useState("")
     const [titulo, actualizarTitulo] = useState("")
     const [color, actualizarColor] = useState("")
@@ -22,7 +22,7 @@ const Formulario = (props) => {
         let datosAEnviar = {
             nombre: nombre,
             puesto: puesto,
-            foto: foto,
+            video: video,
             equipo: equipo
         }
         props.registrarColaborador(datosAEnviar)
@@ -37,7 +37,7 @@ const Formulario = (props) => {
 
     return <section className="formulario">
         <form onSubmit={manejarEnvio}>
-            <h2>Rellena el formulario para crear el colaborador.</h2>
+            <h2>Ingresa datos del nuevo Video.</h2>
             <Campo 
                 titulo="Nombre" 
                 placeholder="Ingrese nombre" 
@@ -46,17 +46,17 @@ const Formulario = (props) => {
                 actualizarValor= {actualizarNombre}
             />
             <Campo 
-                titulo="Puesto" 
-                placeholder="Ingrese su puesto" 
+                titulo="Estilo" 
+                placeholder="Ingresa el Estilo" 
                 required
                 valor={puesto}
                 actualizarValor={actualizarPuesto} 
             />
             <Campo 
-                titulo="Foto" 
-                placeholder="Cargar su foto" 
+                titulo="video" 
+                placeholder="Cargar su video" 
                 required 
-                valor={foto}
+                valor={video}
                 actualizarValor={actualizarFoto} 
             />
             <ListaOpciones 
@@ -65,25 +65,6 @@ const Formulario = (props) => {
                 equipos = {props.equipos}
             />
             <Boton texto="Crear"/>
-        </form>
-        <form onSubmit={manejarNuevoEquipo}>
-            <h2>Rellena el formulario para crear el Equipo.</h2>
-            <Campo
-                titulo="Titulo" 
-                placeholder="Ingrese titulo" 
-                required 
-                valor={titulo}
-                actualizarValor= {actualizarTitulo}
-            />
-            <Campo
-                titulo="Color" 
-                placeholder="Ingrese el color Hex" 
-                required
-                valor={color}
-                actualizarValor={actualizarColor} 
-                type="color"
-            />
-            <Boton texto="Registrar Equipo"/>
         </form>
     </section>
 }
